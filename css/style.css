@@ -1,0 +1,51 @@
+.item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  width: 80%;
+}
+
+/* light-container */
+.light-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+    width: 80%;
+    height: 80%;
+    background-image: url(/images/1.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.box i {
+    color: #09c;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
