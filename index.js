@@ -44,3 +44,9 @@ document.addEventListener("keyup", function (e) {
   if (!lightContainer.classList.contains("d-none"))
     e.key == "ArrowRight" ? slide(1) : slide(-1);
 });
+
+document.addEventListener('click', function(e){
+    // console.log(e.target);
+    if(e.target == lightContainer) 
+        lightContainer.classList.add('d-none')
+})
