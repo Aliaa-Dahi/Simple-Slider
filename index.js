@@ -22,12 +22,25 @@ btnClose.addEventListener("click", function () {
   lightContainer.classList.add("d-none");
 });
 
+function slide(move) {
+  if (move == 1) {
+    if (index == imgList.length - 1) index = -1;
+    box.style.backgroundImage = `url(${imgList[++index].src})`;
+  } else if (move == -1) {
+    if (index == 0) index = imgList.length;
+    box.style.backgroundImage = `url(${imgList[--index].src})`;
+  }
+}
+
 nextBtn.addEventListener("click", function () {
-  if (index == imgList.length - 1) index = -1;
-  box.style.backgroundImage = `url(${imgList[++index].src})`;
+  slide(1);
 });
 
 prevBtn.addEventListener("click", function () {
-  if (index == 0) index = imgList.length;
-  box.style.backgroundImage = `url(${imgList[--index].src})`;
+  slide(-1);
+});
+
+document.addEventListener("keyup", function (e) {
+  if (!lightContainer.classList.contains("d-none"))
+    e.key == "ArrowRight" ? slide(1) : slide(-1);
 });
