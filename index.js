@@ -1,9 +1,13 @@
-// var myImgs = document.querySelectorAll(".sub-img img"); // NodeList
-// var maniImg = document.querySelector(".main-img");
+let imgList = document.querySelectorAll(".item img"); // NodeList\
+let lightContainer = document.querySelector(".light-container");
+let btnClose = document.getElementById("close");
 
-// for (var i = 0; i < myImgs.length; i++) {
-//   myImgs[i].addEventListener("click", function (e) {
-//     var currentSrc = e.target.getAttribute("src");
-//     maniImg.setAttribute("src", currentSrc);
-//   });
-// }
+for (let i = 0; i < imgList.length; i++) {
+  imgList[i].addEventListener("click", function () {
+    lightContainer.classList.remove("d-none");
+  });
+}
+
+btnClose.addEventListener("click", function () {
+  lightContainer.classList.add("d-none");
+});
